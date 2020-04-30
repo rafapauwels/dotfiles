@@ -7,13 +7,7 @@ floating_modifier $mod
 
 # Application shortcuts
 # Terminal
-bindsym $mod+Return exec alacritty
-# Chrome
-bindsym Control+$mod+c exec chromium
-# Discord
-bindsym Control+$mod+d exec discord
-# Spotify
-bindsym Control+$mod+s exec spotify
+bindsym $mod+Return exec termite
 
 # Toggle polybar visibility
 
@@ -125,14 +119,14 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
+set $ws1 "1: Firefox"
+set $ws2 "2: Code"
+set $ws3 "3: Art"
+set $ws4 "4: Visual Studio"
+set $ws5 "5: Android"
+set $ws6 "6: Emulators"
+set $ws7 "7: Trello"
+set $ws8 "8: Music"
 set $ws9 "9"
 set $ws10 "10"
 
@@ -159,6 +153,17 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+
+# automove
+assign [class="Navigator"] $ws1
+assign [class="Code"] $ws2
+assign [class="Aseprite"] $ws3
+assign [title="Windows 10 [Running] - Oracle VM VirtualBox"] $ws4
+assign [class="Genymotion Player"] $ws5
+assign [class="Genymotion"] $ws6
+assign [class="VirtualBox Manager"] $ws6
+assign [class="Trello"] $ws7
+assign [class="spotify"] $ws8
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -193,3 +198,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# Keyboard toggle with alt+space
+exec setxkbmap -option "grp:win_space_toggle" -layout "us,br"

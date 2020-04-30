@@ -239,11 +239,11 @@ reverse-scroll = false
 ; Default: false
 fuzzy-match = true
 
-label-unfocused = %index%
+label-unfocused = %name%
 label-unfocused-padding = 2
 label-unfocused-foreground = #eeeeee
 
-label-focused = %index%
+label-focused = %name%
 label-focused-foreground = #eeeeee
 label-focused-background = #233446
 label-focused-underline = #fba922
